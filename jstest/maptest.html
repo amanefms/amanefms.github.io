@@ -1,0 +1,62 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css"> 
+    <script src="http://js.api.olp.yahooapis.jp/OpenLocalPlatform/V1/jsapi?appid=dj00aiZpPVhrcEdNTFVwR0xOTiZzPWNvbnN1bWVyc2VjcmV0Jng9ODY-"></script>
+<script>
+window.onload = function(){
+    document.querySelector("#getbutton").onclick = function(){
+        var ymap = new Y.Map("div_map");
+        ymap.drawMap(new Y.LatLng(35.681236, 139.767125), 17, Y.LayerSetId.NORMAL);
+        var marker = new Y.Marker(new Y.LatLng(35.713378, 139.794292));
+        var label = new Y.Label(new Y.LatLng(35.7137, 139.794292), "目的地　クリック");
+        ymap.addFeature(label);
+        var image = document.querySelector("#jiburi");
+        var quest = document.querySelector("#question");
+        var hint = document.querySelector("#hint");
+
+                hint.innerHTML = "ヒント";
+                hint.onclick = function(){
+                hint.innerHTML = "背景色が赤に近くなるほど目的地に近いです"
+                }
+            
+        marker.bind("mouseover", function(){
+            ymap.addFeature(label);
+        });
+        marker.bind("click", function(){
+            image.src = "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20141018%2F51%2F5946481%2F0%2F695x460x11fe3022ce15937b6b161c45.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op=r";
+            quest.innerHTML = "何の聖地でしょうか？　正解は画像をクリック";
+            hint.innerHTML = "ヒント";
+            hint.onclick = function(){
+                hint.innerHTML = "ジブリです";
+            }
+        });
+        image.onclick = function(){
+            image.src = "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20141018%2F51%2F5946481%2F5%2F677x360x7dd89e6ddb87d774c4b24223.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op=r";
+            hint.innerHTML = "正解は『千と千尋の神隠し』でした！！";
+        }
+        ymap.addFeature(marker);
+        ymap.bind("moveend", function(){
+            var latlng = ymap.getCenter();
+            console.log(latlng);
+            console.log("緯度: " + latlng.lat() );
+            console.log("経度: " + latlng.lng() );
+            var distance = Math.sqrt(Math.pow(35.713378 - latlng.lat(), 2) + Math.pow(139.794292 - latlng.lng(), 2));
+            image.src = "";
+            quest.innerHTML = "";
+            var col = 255 - Math.floor(distance*5000);
+            document.querySelector('#b').style.background = "rgb(" + col + ", 0, 0)";
+        });
+    }
+};
+</script>
+</head>
+<body id="b" style="background:rgb(0, 0, 0)">
+    <h1 style="color:rgb(225, 241, 255)">目的地はどこだ！！</h1>   
+<input type=button value="START" id="getbutton">
+<div id="div_map" style="width:400px; height:300px;"></div>
+<div id="question" style="color:rgb(242, 236, 255)"></div>
+<img src="" id="jiburi" style="position:relative;">
+<div id="hint" style="color:antiquewhite"></div>
+</body>
+</html>

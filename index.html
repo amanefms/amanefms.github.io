@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-503B3NN1NT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-503B3NN1NT');
+</script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Amane's Homepage</title>
+  <script src="js/jquery.js"></script>
+  <script src="js/processing.js"></script> 
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fuwaimg.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <nav id="globalnav" class="colorchange">
+    <div class="globalnav_bg"></div>
+    <div class="container">
+      <h1 class="logo"><a href="index.html">Amane's Homepage</a></h1>
+      <p id="menubtn">&#9776;</p>
+        <ul id="navmenu">
+          <li><a href="gallery.html">gallery</a></li>
+          <li><a href="works.html">works</a></li>
+          <li><a href="#">TOP</a>
+            <ul>
+              <li><a href="index.html#about">about</a></li>
+              <li><a href="index.html#works">WORKs</a></li>
+              <!--<li><a href="index.html#contact">contact</a></li>-->
+            </ul>
+          </li>
+        </ul>
+    </div>
+  </nav>
+
+<header id="eyecatch"> <!-- header始まり  -->
+  <img src="img/HomePage iphone.png" class="top-phone">
+    <video autoplay muted playsinline loop>
+        <source src="movie/Amane's Page3.mp4" type="video/mp4">
+    </video>
+<!--
+写真の場合
+<img src="img/Amane's Page.png" alt="TEMPLATE - [PROJECT]" class="top-pc">
+<img src="img/Amane's Page.png" alt="TEMPLATE - [PROJECT]" class="top-phone">  
+-->
+
+<!--
+スマホで見た場合だけ見せる画像を変えたい場合は、
+下の行（class="top-phone"の方）でスマホで見せたい画像を指定してください。
+PCではきれいに表示されても、スマホで見ると魅せたいエリアが画面外に切り抜かれてしまう可能性があります。
+ -->
+
+</header> <!-- headerおわり  -->
+
+
+<main>
+
+<!--  <section class="bgcolor2">  NEWSセクションはじまり 
+     sectionにclass="bgcolor2"を与えると背景がグレーに、classを削除すると背景が白になります 
+    <div class="container">
+      <h2 id="news">NEWS</h2>
+      <dl class="news">
+        <dt>2020.07.13</dt>
+        <dd>更新履歴やニュースなどを書くスペースです。</dd>
+      </dl>
+      <dl class="news">
+        <dt>2020.07.10</dt>
+        <dd>一行で使うとキレイですが、改行してもOK.<br>こんな感じです。</dd>
+      </dl>
+      <dl class="news">
+        <dt>2020.07.08</dt>
+        <dd>企画やイベントなどの告知サイトにおススメのテンプレートです。</dd>
+      </dl>
+      <dl class="news">
+        <dt>2020.07.02</dt>
+        <dd><a href="#">リンクを貼ることもできます。</a></dd>
+      </dl>
+      <dl class="news">
+        <dt>2020.07.01</dt>
+        <dd>サンプルサンプルサンプル。</dd>
+      </dl>
+
+    </div>
+  </section>  NEWSセクションおわり 
+-->
+  <section> <!-- ABOUTセクションはじまり -->
+    <div class="container">
+      <hr>
+      <h2 id="about">ABOUT</h2>
+
+      <font size="4">
+        <table>
+            <tr><th>名前 </th><td>深見　天音</td></tr>
+            <tr><th>所属 </th><td>明治大学 総合数理学部 先端メディアサイエンス学科<br>宮下研究室</td></tr>
+            <tr><th>趣味 </th><td>切り絵, スポーツ, 映像制作, ギター</td></tr>
+        </table>
+      </font>
+      <!--
+      <div class="wrap">  2カラムはじまり 
+        <div class="inner">  左カラム始まり 
+        </div>  左カラムおわり 
+        <div class="inner">  右カラム始まり 
+        </div>  右カラムおわり 
+      </div>  2カラムおわり 
+      -->
+    </div>
+  </section> <!-- ABOUTセクションおわり -->
+
+  <section class="bgcolor2"> <!-- GALLERYセクションはじまり -->
+    <div class="container">
+      <hr>
+      <h2 id="works">WORKs</h2>
+      <p class = "right"><a href="works.html">➡︎詳細はこちら</a></p>
+      <ul class="illust">
+        <li><a href="img/Myハンディ.png" data-fimg="illust" data-fcaption="グループで制作したウェブシステム。本サービスは振る舞い方がわからない飲食店に行く時、スムーズに注文するために事前に注文の流れを把握できるサービス。" class="fuwaimg"><img src="img/Myハンディ.png"></a></li>
+        <li><a href="img/Food Research.png" data-fimg="illust" data-fcaption="自分の行きたいレストランなどを管理するためのサービス。データを蓄積し, 地図表示や検索などの機能がある。" class="fuwaimg"><img src="img/Food Research.png"></a></li>
+        <li><a href="movie/時計内部の模倣.mp4" data-fimg="illust" data-fcaption="processingにて制作した3DCGモデリング。" class="fuwaimg"><img src="img/時計内部の模倣.png"></a></li>
+        <li><a href="movie/icloudのメールボックスの動作再現.mov" data-fimg="illust" data-fcaption="processingにて制作したiCloudメールボックスの再現。メールボックスをスクロールして更新をする時にテキストが先導を切って動き始め,それを追うように少し遅れてボックスがついていく動作を再現した。" class="fuwaimg"><img src="img/icloudメールボックス.png"></a></li>
+        <li><a href="movie/Strange Eraser.mp4" data-fimg="illust" data-fcaption="Adobe After Effectsにて制作した映像作品。" class="fuwaimg"><img src="img/Strange Eraser.png"></a></li>
+        <li><a href="movie/pitagora.mov" data-fimg="illust" data-fcaption="processingにて制作したピタゴラスイッチ。" class="fuwaimg"><img src="img/pitagora.png"></a></li>
+        <li><a href="img/vending machine.png" data-fimg="illust" data-fcaption="お金を入れて買えるか判断する簡単な自動販売機システム。" class="fuwaimg"><img src="img/vending machine.png"></a></li>
+        <li><a href="movie/KINECTONE.mov" data-fimg="illust" data-fcaption="グループで制作したKINECTOを使った音楽ゲーム。両手の位置をジェスチャー認識ができるデバイス, KINECTOで読み取り, 操作を行う。表示される音符に手を重ねることでその音符が消えて少しずつ音楽が流れる仕組みになっている。両手を使って音符の配置を好きな配置にすることもできる。" class="fuwaimg"><img src="img/KINECTONE.png"></a></li>
+        <li><a href="movie/Photoflame.mp4" data-fimg="illust" data-fcaption="After Effectsにて制作した映像作品。" class="fuwaimg"><img src="img/Photoflame.png"></a></li>
+        <li><a href="img/ピサの斜塔.png" data-fimg="illust" data-fcaption="CINEMA4Dにて行った3DCGモデリング。" class="fuwaimg"><img src="img/ピサの斜塔.png"></a></li>
+        <li><a href="movie/shishiodoshi.mov" data-fimg="illust" data-fcaption="processingにて制作したししおどしの模倣。" class="fuwaimg"><img src="img/shishiodoshi.png"></a></li>
+        <li><a href="img/a confused way.png" data-fimg="illust" data-fcaption="processingにて制作したゲーム。⽮印が0.5 秒ごとに左, 上, 右, 下とさす⽅向が変わり, スペースキーを押した時に⽮印の差す⽅向に⽮印が進む。矢印が奇数列にあると偶数列の障害物が見えなくなり(画像上)、偶数列にあると奇数列の障害物が見えなくなる（画像下）というリズム感と記憶力が試されるゲーム。" class="fuwaimg"><img src="img/a confused way奇数.jpg"></a></li>
+      </ul>
+      <p class="center">使用した言語・アプリ：</br>processing,　HTML,　CSS,　PHP,　JavaScript,　MySQL,　HSP,　CINEMA4D,　Adobe After Effects</p>
+    </div>
+  </section> <!-- worksセクションおわり -->
+<!--
+  <section class="bgcolor3"> CONTACTセクションはじまり
+    <div class="container">
+
+      <h2 id="contact">CONTACT</h2>
+      <p class="center">このままでは動作しません。<br>
+        メールフォームを設置する場合は<a href="https://do.gt-gt.org/setting-mailform/" target="_blank">この記事</a>を参考に設置してみてください</p>
+      <form method="post" action="ここにアクション" class="mailform">
+        <input type="text" name="message" placeholder="お名前">
+        <input type="mail" name="message" placeholder="メールアドレス">
+        <textarea rows="5" name="message" placeholder="本文"></textarea>
+        <input type="submit" value="Send">
+      </form>
+
+    </div>
+  </section> CONTACTセクションおわり -->
+
+</main>
+
+<!-- 最上部に戻るボタンここから -->
+<a href="#" id="totop"></a>
+<!-- 最上部に戻るボタンここまで -->
+
+<footer>
+<div class="container">
+
+<!-- フッターにコンテンツを入れない場合、削除するエリアここから -->
+  <div class="wrap-3col">  <!-- wrap-3colここから -->
+
+    <div class="inner">
+      <h1>Amane's Homepage</h1>
+    </div>  <!-- inner左カラムここまで -->
+
+    <div class="inner">
+      <ul class="menu">
+        <li><a href="#">TOP</a>
+          <ul>
+            <li><a href="index.html#about">about</a></li>
+            <li><a href="index.html#works">WORKs</a></li>
+          </ul>
+        </li>
+        <li><a href="gallery.html">gallery</a></li>
+        <li><a href="works.html">works</a></li>
+      </ul>
+      <a href="http://fukami.nkmr.io/input.php">おみくじ</a>
+    </div>  <!-- inner中央カラムここまで -->
+
+    <div class="inner">
+      
+    </div>  <!-- inner右カラムここまで -->
+
+  </div>  <!-- wrap-3colここまで -->
+<!-- フッターにコンテンツを入れない場合、削除するエリアここまで -->
+
+<p id="copyright" style="text-align: center;"><a href="https://twitter.com/amane_fms"><img src="img/twitter.png" width="50px" height="50px">twitter here</a></p>
+
+</div>
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/fuwaimg.js"></script>
+</body>
+
+</html>

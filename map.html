@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="http://js.api.olp.yahooapis.jp/OpenLocalPlatform/V1/jsapi?appid=dj00aiZpPVhrcEdNTFVwR0xOTiZzPWNvbnN1bWVyc2VjcmV0Jng9ODY-"></script>
+        <script>
+            var address = "東京都港区六本木";
+            var request = { query : address };
+
+            var geocoder = new Y.GeoCoder();
+            geocoder.execute( request , function( ydf ){
+                if( ydf.features.length > 0 ){
+                    var latlng = ydf.features[0].latlng;
+                    alert(latlng.lat() + "," + latlng.lng());
+                }
+            } );
+            window.onload = function(){
+                document.querySelector("#getbutton").onclick = function(){
+                    var ymap = new Y.Map("div_map");
+                    ymap.drawMap(new Y.LatLng(35.7,139.6), 17, Y.LayerSetId.NORMAL);
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <input type=button value="Get Data!" id="getbutton">
+        <div id="div_map" style="width:600px; height:500px">
+    </body>
+</html>

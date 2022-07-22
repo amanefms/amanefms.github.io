@@ -1,0 +1,23 @@
+.div1{
+  font-size: 50px;
+  color: #364e96;/*文字色*/
+  border: solid 3px #364e96;/*線色*/
+  padding: 0.5em;/*文字周りの余白*/
+  text-align: center;
+}
+.div2{
+    font-size: 30px;
+    padding: 0.5em;/*文字周りの余白*/
+    color: #494949;/*文字色*/
+    background: #fffaf4;/*背景色*/
+    border-left: solid 5px #ffaf58;/*左線（実線 太さ 色）*/
+  }
+  #clocks {
+    display: block;
+    width: 250px;
+    height: 250px;
+  }
+  .clock {
+    position: absolute;
+  }
+  

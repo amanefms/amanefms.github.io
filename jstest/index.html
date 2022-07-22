@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script>
+            var Action = ["ペットを飼います", "結婚します", "一人暮らしします", "家を追い出されます", "就職します", "退職します", "死にます", "借金をします", "会社を立ち上げます", "宇宙に行きます", "大怪我をします"];
+            window.onload = function(){
+                document.querySelector("#year").onclick = function(){
+                    this.innerHTML = 2020 + Math.floor(Math.random() * 50);
+                }
+                document.querySelector("#month").onclick = function(){
+                    this.innerHTML = Math.floor(Math.random() * 12);
+                }
+                document.querySelector("#day").onclick = function(){
+                    this.innerHTML = Math.floor(Math.random() * 30)
+                }
+                document.querySelector("#hour").onclick = function(){
+                    this.innerHTML = Math.floor(Math.random() * 24)
+                }
+                document.querySelector("#minute").onclick = function(){
+                    this.innerHTML = Math.floor(Math.random() * 60)
+                }                
+                var action_tag = document.querySelector("#action");
+                action_tag.onclick = function(){
+                    var rand = Math.floor(Math.random() * 11);
+                    this.innerHTML = Action[rand];
+                    var pics_src = new Array("pet.png","marriage.png", "alone.png", "leave.png", "job.png", "retirement.png", "death.png", "debt.png", "business.png", "space.png", "injury.png");
+                    document.querySelector("#image").src = pics_src[rand];
+                }
+            }       
+        </script>
+    </head>
+    <body>
+        <title>あなたの転機の日を占います</title>
+        <h1>あなたの転機の日を占います</h1>
+            <span style="font-size:30px" id=year>??</span>年　<span style="font-size:30px" id="month">??</span>月　<span style="font-size:30px" id="day">??</span>日　<span style="font-size:30px" id="hour">??</span>時　<span style="font-size:30px" id="minute">??</span>分に　<span style="font-size:30px" id="action">??</span>
+    </br>
+            <img id="image" width=300px height=300px>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<script>
+    window.onload = function(){
+        var units = document.getElementsByTagName("td");
+        for(var i=0; i<units.length; i++){
+            units[i].onclick = function(){
+                if( this.textContent == "　")
+                {
+                    this.textContent = "〇";
+                }
+                else if( this.textContent == "〇")
+                {
+                    this.textContent = "×";
+                }
+                else 
+                {
+                    this.textContent = "　";
+                }
+            }
+        }
+    }
+</script>
+<table border=1>
+    <tr><td id="u11">　</td><td id="u21">　</td><td id="u31">　</td></tr>
+    <tr><td id="u12">　</td><td id="u22">　</td><td id="u32">　</td></tr>
+    <tr><td id="u13">　</td><td id="u23">　</td><td id="u33">　</td></tr>
+</table>
