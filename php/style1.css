@@ -1,0 +1,42 @@
+h1 {
+  position: relative;
+  background: #ffdff1;
+  box-shadow: 0px 0px 0px 5px #ffdff7;
+  border: dashed 2px white;
+  padding: 0.2em 0.5em;
+  color: #454545;
+  text-align: center;
+}
+
+h1:after {
+  position: absolute;
+  content: '';
+  left: -7px;
+  top: -7px;
+  border-width: 0 0 15px 15px;
+  border-style: solid;
+  border-color: #fff #fff #ffa8d4;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+body {
+    background: linear-gradient(10deg, rgb(255, 219, 219), rgb(255, 139, 44));
+      }
+  table {
+      border-collapse: collapse;
+      margin: 0 auto;
+      padding: 0;
+      table-layout: fixed;
+  }
+    
+    table tr{
+      background: rgb(255, 255, 255);
+      border: 2px solid #eee;
+    }
+    table th{
+      background: rgb(255, 229, 229);
+      border: 2px solid #eee;
+    }
+    table td {
+      border-right: 2px solid #eee;
+      text-align: center;
+    }
